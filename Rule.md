@@ -180,11 +180,11 @@ L<sub>n</sub>: 布教するプログラミング言語の番号（0から7で指
         for l in languages:
             best_players = players.max_by(p -> l.real_believer[p])
             for p in best_players:
-                p.score += h.attention / best_players.size
+                p.victory_point += h.attention / best_players.size
 
             worst_players = players.min_by(p -> l.real_believer[p])
             for p in worst_players:
-                p.score -= h.attention / worst_players.size
+                p.victory_point -= h.attention / worst_players.size
 
-        winners = players.max_by(p -> p.score)
+        winners = players.max_by(p -> p.victory_point)
         draw if winners.size > 1
