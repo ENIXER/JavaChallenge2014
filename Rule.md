@@ -86,14 +86,14 @@ AIの思考時間には制限がある。
 ゲーム開始時、つまり1ターン目の初めに、ゲームの設定が以下のフォーマットで標準入力に渡される。
 
 <pre>
-T P H
-E<sub>0</sub> E<sub>1</sub> E<sub>2</sub> ... E<sub>7</sub>
+T P N
+A<sub>0</sub> A<sub>1</sub> A<sub>2</sub> ... A<sub>7</sub>
 </pre>
 
 * T: 全ターン数。
 * P: プレイヤー数。
-* H: プログラミング言語の数。
-* E<sub>n</sub>: プログラミング言語nの注目度。
+* N: プログラミング言語の数。
+* A<sub>n</sub>: プログラミング言語nの注目度。
 
 ### ターン情報の入力形式
 
@@ -101,23 +101,23 @@ E<sub>0</sub> E<sub>1</sub> E<sub>2</sub> ... E<sub>7</sub>
 
 <pre>
 T D
-L<sub>00</sub>　L<sub>01</sub> L<sub>02</sub> L<sub>03</sub>
-L<sub>10</sub>　L<sub>11</sub> L<sub>12</sub> L<sub>13</sub>
-L<sub>20</sub>　L<sub>21</sub> L<sub>22</sub> L<sub>23</sub>
+B<sub>00</sub>　B<sub>01</sub> B<sub>02</sub> B<sub>03</sub>
+B<sub>10</sub>　B<sub>11</sub> B<sub>12</sub> B<sub>13</sub>
+B<sub>20</sub>　B<sub>21</sub> B<sub>22</sub> B<sub>23</sub>
 :
 :
-L<sub>70</sub>　L<sub>71</sub> L<sub>72</sub> L<sub>73</sub>
+B<sub>70</sub>　B<sub>71</sub> B<sub>72</sub> B<sub>73</sub>
 R<sub>0</sub> R<sub>1</sub> R<sub>2</sub> ... R<sub>7</sub>
-B<sub>0</sub> B<sub>1</sub> B<sub>2</sub> ... B<sub>7</sub>
+P<sub>0</sub> P<sub>1</sub> P<sub>2</sub> ... P<sub>7</sub>
 </pre>
 
 * T: 現在のターン数。1から始まる。
 * D: 平日の場合は"W", 休日の場合は"H"。
-* L<sub>nm</sub>: プログラミング言語nに対するプレイヤーmの公開されている（つまり平日の情報のみでわかる）信者数。このAIプレイヤー自身はプレイヤー0である。
+* B<sub>nm</sub>: プログラミング言語nに対するプレイヤーmの公開されている（つまり平日の情報のみでわかる）信者数。このAIプレイヤー自身はプレイヤー0である。
 * R<sub>n</sub>: プログラミング言語nに対するこのAIプレイヤーの真の（つまり休日も合わせた）信者数。
-* B<sub>n</sub>: プログラミング言語nが前日の休日に布教をした(1)かしていない(0)か。
+* P<sub>n</sub>: プログラミング言語nが前日の休日に布教をした(1)かしていない(0)か。
 
-B<sub>0</sub> B<sub>1</sub> B<sub>2</sub> ... B<sub>7</sub>の行は、平日のターンでのみ含まれる。
+P<sub>0</sub> P<sub>1</sub> P<sub>2</sub> ... P<sub>7</sub>の行は、平日のターンでのみ含まれる。
 
 ### 行動の出力形式
 
@@ -126,16 +126,16 @@ B<sub>0</sub> B<sub>1</sub> B<sub>2</sub> ... B<sub>7</sub>の行は、平日の
 * __平日の場合__
 
   <pre>
-  H<sub>0</sub> H<sub>1</sub> H<sub>2</sub> H<sub>3</sub> H<sub>4</sub>
+  L<sub>0</sub> L<sub>1</sub> L<sub>2</sub> L<sub>3</sub> H<sub>L</sub>
   </pre>
   
 * __休日の場合__
 
   <pre>
-  H<sub>0</sub> H<sub>1</sub>
+  L<sub>0</sub> L<sub>1</sub>
   </pre>
 
-H<sub>n</sub>: 布教するプログラミング言語の番号（0から7で指定）。H<sub>0</sub>からH<sub>4</sub>の順番は関係しない。
+L<sub>n</sub>: 布教するプログラミング言語の番号（0から7で指定）。L<sub>0</sub>からL<sub>4</sub>の順番は関係しない。
 
 一度行動を出力すると、そのAIのターンは終了となる。
 なお、ターン開始から1秒以内に出力がなければ、AIプログラムが強制的に停止される。
@@ -144,7 +144,7 @@ H<sub>n</sub>: 布教するプログラミング言語の番号（0から7で指
 
 ## ルールの疑似コード
 
-    heroine = (enthusiasm, revealed_love[4], real_love[4])
+    programming_language = (attention, revealed_believer[4], real_believer[4])
 
     main:
         init
@@ -155,36 +155,36 @@ H<sub>n</sub>: 布教するプログラミング言語の番号（0から7で指
 
     init:
         players = player[4]
-        heroines = heroine[8] (rand(3, 6), [0, 0, 0, 0], [0, 0, 0, 0])
+        languages = programming_language[8] (rand(3, 6), [0, 0, 0, 0], [0, 0, 0, 0])
         turn = 1
 
     process_turn:
-        for h in heroines:
-            display_to_all_players(h.enthusiasm)
-            display_to_all_players(h.revealed_love)
+        for l in languages:
+            display_to_all_players(l.attention)
+            display_to_all_players(l.revealed_believer)
             if not is_holiday:
-                display_to_all_players(h.dated)
-            h.dated = false
+                display_to_all_players(l.propagated)
+            h.propagated = false
 
         for p in players:
             for i in [1 .. (is_holiday ? 2 : 5)]:
-                target = heroines[p.selected[i]]
-                target.revealed_love[p] += (is_holiday ? 0 : 1)
-                target.real_love[p] += (is_holiday ? 2 : 1)
-                target.dated = true
+                target = languages[p.selected[i]]
+                target.revealed_believer[p] += (is_holiday ? 0 : 1)
+                target.real_believer[p] += 1
+                target.propagated = true
 
     is_holiday:
         turn % 2 == 0
 
     finish:
-        for h in heroines:
-            best_players = players.max_by(p -> h.real_love[p])
+        for l in languages:
+            best_players = players.max_by(p -> l.real_believer[p])
             for p in best_players:
-                p.popularity += h.enthusiasm / best_players.size
+                p.score += h.attention / best_players.size
 
-            worst_players = players.min_by(p -> h.real_love[p])
+            worst_players = players.min_by(p -> l.real_believer[p])
             for p in worst_players:
-                p.popularity -= h.enthusiasm / worst_players.size
+                p.score -= h.attention / worst_players.size
 
-        winners = players.max_by(p -> p.popularity)
+        winners = players.max_by(p -> p.score)
         draw if winners.size > 1
