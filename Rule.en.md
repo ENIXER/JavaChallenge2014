@@ -1,4 +1,7 @@
-# Lang Wars - JavaChallenge 2014
+# Lang Wars - JavaChallenge 2014 (BETA)
+
+*THIS DOCUMENT IS STILL BETA!*
+
 ## Overview of Game
 
 You are programmer.
