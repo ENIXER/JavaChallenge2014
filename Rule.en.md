@@ -1,4 +1,4 @@
-# Lang Wars - JavaChallenge 2014 (BETA)
+# Lang Wars - JavaChallenge 2014 *BETA*
 
 *THIS DOCUMENT IS STILL BETA!*
 
