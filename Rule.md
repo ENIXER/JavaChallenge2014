@@ -1,16 +1,17 @@
 # Lang Wars - JavaChallenge 2014
-## ゲームの概要
+## Overview of Game
 
-あなたはプログラマ。プログラミング言語を布教して信者を増やそう。
-ライバルたちを出し抜いて、プログラミング言語界の法王になれ！
+You are programmer.
+Let's propagandize programming languages and increase the population of the programming languages.
+Overreach rivals and become the pontiff of programming languages!
 
-## ルールの疑似コード
+## Pseudo Code of Game Rule
 
-自然言語よりコードをご希望の方に向けて、[ルールの疑似コード](#PseudoCode)を用意した。
+If you want to read the game rule in a programming language, please see [pseudo code](#PseudoCode).
 
-## ゲームの目的
+## Goal of Game
 
-各 _プログラミング言語_ の _信者数_ によって決まる _勝利点_ を、他の _プレイヤー_ より多く得る。
+Gain more _victory points_ calculated by the number of believers of each programming language than them of the other players.
 
 ## ゲームの大まかな流れ
 
