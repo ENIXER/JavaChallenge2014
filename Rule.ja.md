@@ -1,4 +1,7 @@
-# Lang Wars - JavaChallenge 2014
+# Lang Wars - JavaChallenge 2014 (BETA)
+
+*THIS DOCUMENT IS STILL BETA!*
+
 ## ゲームの概要
 
 あなたはプログラマ。プログラミング言語を布教して信者を増やそう。
