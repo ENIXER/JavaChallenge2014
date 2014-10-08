@@ -165,7 +165,7 @@ Note that, if an AI program does not print its action within 1 second from the b
             display_to_all_players(l.revealed_believer)
             if not is_holiday:
                 display_to_all_players(l.propagated)
-            h.propagated = false
+            l.propagated = false
 
         for p in players:
             for i in [1 .. (is_holiday ? 2 : 5)]:
