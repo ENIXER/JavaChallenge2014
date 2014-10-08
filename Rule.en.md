@@ -71,7 +71,7 @@ When there are multiple players gained the most victory points, the game ends in
 ## Input Format of AI Programs
 
 AI programs are executed at the start of the game.
-
+AI programs should write `READY` to the standard output and read the settings of game.
 
 AIはゲーム開始時に実行される。
 ゲームを始める準備ができたら`READY`と出力したのち、ゲームの設定を入力として受け取る。
