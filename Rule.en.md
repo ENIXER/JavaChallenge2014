@@ -47,7 +47,7 @@ In addition, players propagate the same programming language with others, will n
 
 The number of the believers of each programming language will be calculated after all players select propagating languages.
 If the turn is workday, which player propagates which programming language is revealed.
-If the turn is holiday, only which programming languages are propagated one or more times is revealed.
+If the turn is holiday, only how many times each programming language is propagated is revealed.
 
 The following table indicates the propagation feature in a workday turn and a holiday turn.
 
@@ -55,7 +55,7 @@ The following table indicates the propagation feature in a workday turn and a ho
 | ----------------------------------------------- | ------- | ------- |
 | Propagation times                               | 5       | 2       |
 | Number of believers gathered per propagation    | 1       | 1       |
-| Revelation of propagation information           | ALL     | For each programming language, whether it was propagated or not|
+| Revelation of propagation information           | ALL     | For each programming language, number of propagation times|
 
 ## End of Game
 
