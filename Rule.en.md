@@ -16,9 +16,12 @@ If you want to read the game rule in a programming language, please see [pseudo 
 
 Gain more _victory points_ calculated by the number of believers of each programming language than them of the other players.
 
-## ゲームの大まかな流れ
+## Flow of Game
 
-プレイヤーは4人、プログラミング言語は8種類ある。
+There are four players and eight programming languages.
+
+Lang Wars is a turn-based game. Players propagate their favorite programming languages and gather believers.
+Because players' actions are partially hidden, it is important to
 
 このゲームはターン制であり、各ターンごとに、プレイヤーたちは好きなプログラミング言語を _布教_ して信者を集める。
 布教の情報は一部が隠されているため、他のプレイヤーとの駆け引きが重要となる。
