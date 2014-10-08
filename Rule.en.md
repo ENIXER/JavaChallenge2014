@@ -40,40 +40,38 @@ The first turn is workday. Workday and holiday turns will alternately change.
 In other words, a week consists of two turns, odd turn is workday and even turn is holiday.
 Players simultaneously select propagating programming languages.
 They select programming languages five times in a workday turn, in contrast, they select programming languages two times in a holiday turn.
-Players can select a programming language a propagation then the number of believers increase one corresponing to the programming language.
+Players can select a programming language a propagation, then the number of the believers corresponing to the programming language rises one.
+Players can freely allocate the number of propagations to programming languages.
+For example, a player can propagate five programming languages or the same programming language five times in a workday turn.
+When multiple players propagate the same programming language, it doesn't affect on increase in the number of believers.
+In other words, increase in the number of believers is processed independently on duplicated selection.
 
-ターンが始まると、プレイヤーたちは一斉に布教する言語を選ぶ。
-平日では1ターンで5回（5日分）布教をするが、休日では1ターンに2回（2日分）布教する。
-1回の布教では1種類の言語を布教し、自分の布教した言語に対する信者数が1増える。
-1ターン中の布教言語の割り振りは自由である。
-例えば平日であれば、バラバラの5言語を1回ずつ布教しても良いし、同じ言語を5回布教しても良い。
-なお、布教言語が他のプレイヤーと同じであっても、信者数の増加に影響はない。
+The number of the believers corresponding to selected programming languages after all plyaers select propagating langugaes.
+When the turn is workday, who propagates which programming language is revealed.
+When the turn is holiday, which programming languages are propagated one or more times is revealed.
 
-全プレイヤーが布教言語を選んだら、各プログラミング言語に対する信者数が計算される。
-そのターンが平日の場合、誰がどの言語を布教したかが全員に公開される。
-そのターンが休日の場合、どのプログラミング言語が布教を1回以上されたかのみ公開される。
+The following table indicates the propagation feature in a workday turn and a holiday turn.
 
-下の表は、平日と休日の布教の特徴をまとめたものである。
+|                                                 | Workday | Holiday |
+| ----------------------------------------------- | ------- | ------- |
+| Propagation times                               | 5       | 2       |
+| Number of increased believers per a propagation | 1       | 1       |
+| Release of propagation information              | ALL     | Presence or absence of propagation for each programming language |
 
-|                     | 平日 | 休日 |
-| ------------------- | ---- | ---- |
-| 布教回数            | 5    | 2    |
-| 布教1回で増える信者数 | 1    | 1    |
-| 布教情報の公開       | 全情報公開 | 各言語に対する布教の有無のみ公開 |
+## End of Game
 
-## ゲームの終了
+After 10 turns, the game ends and victory points are calculated.
 
-10ターン目が終わると、ゲームが終了し、勝利点の計算に入る。
+The player who gatherd the most/least number of the believers of a programming language gains/loses the attension degree of the language as victory points.
+When multiple players gathered the most/least number of the believers, they gain/lose the attension degree divided by the number of the players.
 
-各プログラミング言語で得られる勝利点は、そのプログラミング言語に対する信者数を他のプレイヤーと比べて決められる。
-そのプログラミング言語に対する信者数が全プレイヤー中で最も高い場合は、注目度と同じ点数の勝利点を得る。
-逆に全プレイヤー中で最も低い場合は、注目度と同じ点数の勝利点を失う。
-トップや最下位のプレイヤーが複数いる場合は、注目度をそれらのプレイヤーの人数で割った点数だけ得点あるいは失点する。
+After victory points of all the programming languages are calcuated, the player who gained the most victory points wins.
+When there are multiple players gained the most victory points, the game ends in a draw.
 
-各プレイヤーの勝利点をすべてのプログラミング言語に対して計算したら、最も勝利点の高いプレイヤーを勝者とする。
-最も勝利点の高いプレイヤーが複数いる場合は、そのゲームは引き分けである。
+## Input Format of AI Programs
 
-## AIの入出力形式
+AI programs are executed at the start of the game.
+
 
 AIはゲーム開始時に実行される。
 ゲームを始める準備ができたら`READY`と出力したのち、ゲームの設定を入力として受け取る。
