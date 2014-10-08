@@ -63,12 +63,14 @@ var InformationScene = ReplayerScene.extend({
     },
 
     setupDatedImages: function () {
-        _(this.game.getNumHeroines()).times(function (heroineIndex) {
-            var heroine = this.game.heroines[heroineIndex];
-            var heroinePanel = this.getHeroinePanel(heroineIndex);
-            var showDated = heroine.dated && this.getLovePanelMode() == ReplayerScene.HEART_LOVE_PANEL_MODE && this.game.isWeekday();
-            heroinePanel.getChildByName('DatedImage').setVisible(showDated);
-        }, this);
+        if (this.getLovePanelMode() == ReplayerScene.HEART_LOVE_PANEL_MODE && this.game.isWeekday()) {
+            _(this.game.getNumHeroines()).times(function (heroineIndex) {
+                var heroine = this.game.heroines[heroineIndex];
+                var heroinePanel = this.getHeroinePanel(heroineIndex);
+                var datedCount = heroine.getDatedCount();
+                heroinePanel.getChildByName('DatedImage').loadTexture(res.image.info.datedCounts[datedCount]);
+            }, this);
+        }
     },
 
     setupLovePanels: function () {

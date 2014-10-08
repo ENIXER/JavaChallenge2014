@@ -11,8 +11,7 @@
   "designWidth": 200,
   "textures": [],
   "texturesPng": [
-    "dummy.png",
-    "dated.png"
+    "dummy.png"
   ],
   "version": "1.5.0.0",
   "widgetTree": {
@@ -466,39 +465,39 @@
           "customProperty": "",
           "flipX": false,
           "flipY": false,
-          "height": 25,
-          "ignoreSize": true,
+          "height": 48,
+          "ignoreSize": false,
           "layoutParameter": null,
           "opacity": 255,
-          "positionPercentX": 0.835,
-          "positionPercentY": 0.9583333,
+          "positionPercentX": 0.855,
+          "positionPercentY": 0.9244792,
           "positionType": 0,
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
-          "sizePercentX": 0.4,
-          "sizePercentY": 0.208333328,
+          "sizePercentX": 0.24,
+          "sizePercentY": 0.125,
           "sizeType": 0,
           "tag": 234,
           "touchAble": false,
           "useMergedTexture": false,
           "visible": true,
-          "width": 59,
-          "x": 167,
-          "y": 368,
+          "width": 48,
+          "x": 171,
+          "y": 355,
           "capInsetsHeight": 1,
           "capInsetsWidth": 1,
           "capInsetsX": 0,
           "capInsetsY": 0,
           "fileName": null,
           "fileNameData": {
-            "path": "dated.png",
+            "path": "dummy.png",
             "plistFile": "",
             "resourceType": 0
           },
           "scale9Enable": false,
-          "scale9Height": 25,
-          "scale9Width": 59
+          "scale9Height": 48,
+          "scale9Width": 48
         }
       }
     ],
