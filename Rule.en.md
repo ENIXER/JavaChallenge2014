@@ -20,11 +20,11 @@ Gain more _victory points_ calculated by the number of believers of each program
 
 There are four players and eight programming languages.
 
-Lang Wars is a turn-based game. Players propagate their favorite programming languages and gather believers.
-Because players' actions are partially hidden, it is important to
+Lang Wars is a turn-based game. Players _propagate_ their favorite programming languages and gather believers.
+Because players' actions are partially hidden, it is important that bargaingin with each other.
 
-このゲームはターン制であり、各ターンごとに、プレイヤーたちは好きなプログラミング言語を _布教_ して信者を集める。
-布教の情報は一部が隠されているため、他のプレイヤーとの駆け引きが重要となる。
+Games end in 10 turns, then players gain victory points corresponding to the number of believers of programing languages.
+The player who gatherd the most number of the believers of a programming language gains the victory points corresponding to the language, in contrast, the player who gatherd the least number of the believers of a programming language loses the victory points corresponding to the language.
 
 10ターンでゲームが終了し、プレイヤーたちはそれぞれのプログラミング言語に対する信者数に応じて勝利点を得る。
 各プログラミング言語の信者数が最も多いプレイヤーはその言語に対する勝利点を得るが、信者数が最も少ないプレイヤーは勝利点を失ってしまう。
