@@ -5,7 +5,7 @@
 ## Overview of Game
 
 You are programmer.
-Let's propagandize programming languages and increase the population of the programming languages.
+Let's propagandize programming languages and increase the number of believers of the programming languages.
 Overreach rivals and become the pontiff of programming languages!
 
 ## Pseudo Code of Game Rule
@@ -14,94 +14,91 @@ If you want to read the game rule in a programming language, please see [pseudo 
 
 ## Goal of Game
 
-Gain more _victory points_ calculated by the number of believers of each programming language than them of the other players.
+Get more _victory points_, which are calculated with the number of believers of each programming language, than other players.
 
 ## Flow of Game
 
 There are four players and eight programming languages.
 
-Lang Wars is a turn-based game. Players _propagate_ their favorite programming languages and gather believers.
+Lang Wars is a turn-based game. Players _propagandize_ their favorite programming languages and gather believers.
 Because players' actions are partially hidden, it is important that bargaingin with each other.
 
 Games end in 10 turns, then players gain victory points corresponding to the number of believers of programing languages.
-The player who gatherd the most number of the believers of a programming language gains the victory points corresponding to the language, in contrast, the player who gatherd the least number of the believers of a programming language loses the victory points corresponding to the language.
+The player who gathered the most number of the believers of a programming language gets the victory points of the language, in contrast, the player who gathered the least number of the believers of a programming language loses the victory points of the language.
 Thus, players should propagate favorite programming languages and gather more believers than the other players, and also, propagate the other programming languages to prevent losing victory points.
 The player who gains the most victory points will win!
 
 ## Game Start
 
-The game system set random integers (3-6) to _attention degree_ and reveal them to players at the beginning.
-The higher attention degree a programming languages has, the more victory point the plyaer who gatherd the most/least number of the believers of the language gains/loses.
+The game system set random _attention degree_ (from 3 to 6) to every programming language, and reveal them to players at the beginning.
+A language with higher attention degree has more victory points. Players who gathered the most/least number of believers of this language will gain/lose more victory points.
 
 ## Flow of Turn
 
-There are both a workday turn and a holiday turn.
-The first turn is workday. Workday and holiday turns will alternately change.
-In other words, a week consists of two turns, odd turn is workday and even turn is holiday.
+There are two types of turns, workday turn and holiday turn.
+The first turn is workday. Workday and holiday turns will alternately appear.
+In other words, two turns is one week, odd turn is workday and even turn is holiday.
 Players simultaneously select propagating programming languages.
-They select programming languages five times in a workday turn, in contrast, they select programming languages two times in a holiday turn.
-Players can select a programming language a propagation, then the number of the believers corresponing to the programming language rises one.
-Players can freely allocate the number of propagations to programming languages.
-For example, a player can propagate five programming languages or the same programming language five times in a workday turn.
-When multiple players propagate the same programming language, it doesn't affect on increase in the number of believers.
-In other words, increase in the number of believers is processed independently on duplicated selection.
+They select programming languages five times in a workday turn, and two times in a holiday turn.
+Players select a programming language to propagate one time, will gather one believer of that language.
+Players can freely choose which programming languages to propagate.
+For example, players can choose five programming languages to propagate each one time, or propagate the same programming language five times in a workday turn.
+In addition, players propagate the same programming language with others, will not influence others to gather believers.
 
-The number of the believers corresponding to selected programming languages after all plyaers select propagating langugaes.
-When the turn is workday, who propagates which programming language is revealed.
-When the turn is holiday, which programming languages are propagated one or more times is revealed.
+The number of the believers of each programming language will be calculated after all players select propagating languages.
+If the turn is workday, which player propagates which programming language is revealed.
+If the turn is holiday, only which programming languages are propagated one or more times is revealed.
 
 The following table indicates the propagation feature in a workday turn and a holiday turn.
 
 |                                                 | Workday | Holiday |
 | ----------------------------------------------- | ------- | ------- |
 | Propagation times                               | 5       | 2       |
-| Number of increased believers per a propagation | 1       | 1       |
-| Release of propagation information              | ALL     | Presence or absence of propagation for each programming language |
+| Number of believers gathered per propagation    | 1       | 1       |
+| Revelation of propagation information           | ALL     | For each programming language, whether it was propagated or not|
 
 ## End of Game
 
 After 10 turns, the game ends and victory points are calculated.
 
-The player who gatherd the most/least number of the believers of a programming language gains/loses the attension degree of the language as victory points.
-When multiple players gathered the most/least number of the believers, they gain/lose the attension degree divided by the number of the players.
+The player who gathered the most/least number of the believers of a programming language gains/loses the attention degree of the language as victory points.
+When multiple players gathered the most/least number of the believers, they gain/lose the attention degree divided by the number of the players.
 
-After victory points of all the programming languages are calcuated, the player who gained the most victory points wins.
+After victory points of all the programming languages are calculated, the player who gained the most victory points wins.
 When there are multiple players gained the most victory points, the game ends in a draw.
 
 ## Input Format of AI Programs
 
 AI programs are executed at the start of the game.
-AI programs should write `READY` to the standard output and read the settings of game.
+AI programs should print `READY` to the standard output and read the settings of game.
+Then, AI programs read current propagation information of each turn, and print the selected languages.
 
-AIはゲーム開始時に実行される。
-ゲームを始める準備ができたら`READY`と出力したのち、ゲームの設定を入力として受け取る。
-また、ターンごとに現在の情報を入力として受け取り、そのターンでの布教言語を出力する。
+The Thinking time of AI is limited.
+If an AI program exceeds the limited thinking time, it will be terminated by force and its behavior will be regarded as "select language 0 always" until the end.
 
-AIの思考時間には制限がある。
-制限時間を超過するとAIプログラムが強制的に停止され、それ以降の行動が「全日程で0番のプログラミング言語を布教する」として処理される。
+### Output Format of Ready Message
 
-### 準備完了メッセージの出力形式
+When the AI programs prepared for the game, they must print `READY` to the standard output.
+Note that, the ready message must be printed within 5 seconds from game start, otherwise the AI program will be terminated by force.
 
-ゲームを開始する準備ができたら、`READY`と標準出力に出力する。
-ゲーム開始から5秒以内に出力がなければ、AIプログラムが強制的に停止される。
+### Input Format of Game Settings
 
-### ゲーム設定の入力形式
-
-ゲーム開始時、つまり1ターン目の初めに、ゲームの設定が以下のフォーマットで標準入力に渡される。
+When the game starts (before the 1st turn), game system sends settings to every AI program through the standard input.
+The format of settings are listed as following:
 
 <pre>
 T P N
 A<sub>0</sub> A<sub>1</sub> A<sub>2</sub> ... A<sub>7</sub>
 </pre>
 
-* T: 全ターン数。
-* P: プレイヤー数。
-* N: プログラミング言語の数。
-* A<sub>n</sub>: プログラミング言語nの注目度。
+* T: The number of all turns.
+* P: The number of players.
+* N: The number of programming language.
+* A<sub>n</sub>: The attention degree of language n.
 
-### ターン情報の入力形式
+### Input Format of Turn Information
 
-各ターンの初めに、現在の情報が以下のフォーマットで標準入力に渡される。
+At the beginning of each turn, current information was sent through the standard input with following format:
 
 <pre>
 T D
@@ -115,38 +112,38 @@ R<sub>0</sub> R<sub>1</sub> R<sub>2</sub> ... R<sub>7</sub>
 P<sub>0</sub> P<sub>1</sub> P<sub>2</sub> ... P<sub>7</sub>
 </pre>
 
-* T: 現在のターン数。1から始まる。
-* D: 平日の場合は"W", 休日の場合は"H"。
-* B<sub>nm</sub>: プログラミング言語nに対するプレイヤーmの公開されている（つまり平日の情報のみでわかる）信者数。このAIプレイヤー自身はプレイヤー0である。
-* R<sub>n</sub>: プログラミング言語nに対するこのAIプレイヤーの真の（つまり休日も合わせた）信者数。
-* P<sub>n</sub>: プログラミング言語nが前日の休日に布教をした(1)かしていない(0)か。
+* T: Current turn. (starts from 1)
+* D: "W" stand for workday turn, "H" stand for holiday turn.
+* B<sub>nm</sub>: The visible number (only counting the believers gathered in workday turn) of believers of programming language n gathered by player m. The play 0 is your AI program.
+* R<sub>n</sub>: Your real number of believers of program n (counting the believers gathered in both workday and holiday turn).
+* P<sub>n</sub>: Whether the programming language n was propagated in the previous holiday turn. 1 means propagated, 0 means not.
 
-P<sub>0</sub> P<sub>1</sub> P<sub>2</sub> ... P<sub>7</sub>の行は、平日のターンでのみ含まれる。
+The last line (P<sub>0</sub> P<sub>1</sub> P<sub>2</sub> ... P<sub>7</sub>) is only revealed in workday turn.
 
-### 行動の出力形式
+### Output format of Actions
 
-そのターンでの布教言語は、以下のフォーマットで標準出力に出力する。
+Print the propagating language to the standard output with following format:
 
-* __平日の場合__
+* __Workday Turn__
 
   <pre>
-  L<sub>0</sub> L<sub>1</sub> L<sub>2</sub> L<sub>3</sub> H<sub>L</sub>
+  L<sub>0</sub> L<sub>1</sub> L<sub>2</sub> L<sub>3</sub> L<sub>4</sub>
   </pre>
   
-* __休日の場合__
+* __Holiday Turn__
 
   <pre>
   L<sub>0</sub> L<sub>1</sub>
   </pre>
 
-L<sub>n</sub>: 布教するプログラミング言語の番号（0から7で指定）。L<sub>0</sub>からL<sub>4</sub>の順番は関係しない。
+L<sub>n</sub>: The number of propagating programming language (from 0 to 7). The order of L<sub>0</sub> to L<sub>4</sub> is not concerned.
 
-一度行動を出力すると、そのAIのターンは終了となる。
-なお、ターン開始から1秒以内に出力がなければ、AIプログラムが強制的に停止される。
+Once an AI program prints its action, its turn finished.
+Note that, if an AI program does not print its action within 1 second from the beginning of a turn, it will be terminated by force.
 
 <a name="PseudoCode"></a>
 
-## ルールの疑似コード
+## Pseudo Code of Game Rule
 
     programming_language = (attention, revealed_believer[4], real_believer[4])
 
