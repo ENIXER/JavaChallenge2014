@@ -56,7 +56,7 @@ object SampleAI {
 		Console.readLine.split(" ").foreach(v => real = v.toInt::real)
 		real = real.reverse
 		if (day == 'W'){
-			Console.readLine.split(" ").foreach(v => dated = (v.toInt == 1)::dated)
+			Console.readLine.split(" ").foreach(v => dated = v.toInt::dated)
 			dated = dated.reverse
 		}
 	}
