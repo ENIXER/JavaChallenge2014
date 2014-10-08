@@ -6,8 +6,7 @@ using namespace std;
 struct Heroine {
 	int enthusiasm;
 	vector<int> revealedScore;
-	int realScore;
-	bool dated;
+	int realScore, datedTimes;
 };
 int MaxTurn, Turn, PlayersNum, HeroinesNum;
 vector<Heroine> Heroines;
@@ -40,7 +39,7 @@ void readData() {
 		for(int i = 0; i < HeroinesNum; i++) {
 			int d;
 			cin >> d;
-			Heroines[i].dated = (d==1);
+			Heroines[i].datedTimes = d;
 		}
 	}
 }
