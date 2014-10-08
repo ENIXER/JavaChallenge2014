@@ -167,7 +167,7 @@ L<sub>n</sub>: 布教するプログラミング言語の番号（0から7で指
             display_to_all_players(l.revealed_believer)
             if not is_holiday:
                 display_to_all_players(l.propagated)
-            h.propagated = false
+            l.propagated = false
 
         for p in players:
             for i in [1 .. (is_holiday ? 2 : 5)]:
