@@ -25,23 +25,22 @@ Because players' actions are partially hidden, it is important that bargaingin w
 
 Games end in 10 turns, then players gain victory points corresponding to the number of believers of programing languages.
 The player who gatherd the most number of the believers of a programming language gains the victory points corresponding to the language, in contrast, the player who gatherd the least number of the believers of a programming language loses the victory points corresponding to the language.
+Thus, players should propagate favorite programming languages and gather more believers than the other players, and also, propagate the other programming languages to prevent losing victory points.
+The player who gains the most victory points will win!
 
-10ターンでゲームが終了し、プレイヤーたちはそれぞれのプログラミング言語に対する信者数に応じて勝利点を得る。
-各プログラミング言語の信者数が最も多いプレイヤーはその言語に対する勝利点を得るが、信者数が最も少ないプレイヤーは勝利点を失ってしまう。
-したがって、目当てのプログラミング言語を積極的に布教して他プレイヤーより多くの信者を集めつつ、
-他のプログラミング言語に対する信者数にも気を使って失点を防ぐことが重要である。
-勝利点を最も多く獲得したプレイヤーの勝利となる。
+## Game Start
 
-## ゲームの開始
+The game system set random integers (3-6) to _attention degree_ and reveal them to players at the beginning.
+The higher attention degree a programming languages has, the more victory point the plyaer who gatherd the most/least number of the believers of the language gains/loses.
 
-ゲームが開始すると、まずそれぞれのプログラミング言語に _注目度_ が3から6の間でランダムに設定され、プレイヤーに公開される。
-注目度が高いプログラミング言語ほど、ゲーム終了時に得られる（または失う）勝利点が多くなる。
+## Flow of Turn
 
-## ターンの流れ
-
-ターンには _平日_ ターンと _休日_ ターンが存在する。
-1ターン目は平日であり、1ターンごとに平日と休日が入れ替わる。
-つまり、2ターンで一週間となる。
+There are both a workday turn and a holiday turn.
+The first turn is workday. Workday and holiday turns will alternately change.
+In other words, a week consists of two turns, odd turn is workday and even turn is holiday.
+Players simultaneously select propagating programming languages.
+They select programming languages five times in a workday turn, in contrast, they select programming languages two times in a holiday turn.
+Players can select a programming language a propagation then the number of believers increase one corresponing to the programming language.
 
 ターンが始まると、プレイヤーたちは一斉に布教する言語を選ぶ。
 平日では1ターンで5回（5日分）布教をするが、休日では1ターンに2回（2日分）布教する。
