@@ -112,7 +112,7 @@
 
             if (this.isWeekday()) {
                 lines.push(_.map(this.heroines, function (heroine) {
-                    return heroine.getDatedBit();
+                    return heroine.getDatedCount();
                 }).join(' '));
             }
 
@@ -135,7 +135,7 @@
             if (this.isWeekday()) {
                 lines.push('Dated:');
                 lines.push(_.map(this.heroines, function (heroine) {
-                    return heroine.getDatedBit();
+                    return heroine.getDatedCount();
                 }).join(' '));
             }
 
@@ -246,7 +246,7 @@
                 this.revealedLove.push(0);
                 this.realLove.push(0);
             }
-            this.dated = false;
+            this.dated = 0;
         }
 
         Heroine.prototype.date = function (playerIndex, isWeekday) {
@@ -254,7 +254,7 @@
             if (isWeekday) {
                 this.revealedLove[playerIndex] += 1;
             }
-            this.dated = true;
+            this.dated += 1;
         };
 
         Heroine.prototype.filterPlayersByLove = function (players, func, real) {
@@ -270,11 +270,11 @@
         };
 
         Heroine.prototype.refresh = function () {
-            this.dated = false;
+            this.dated = 0;
         };
 
-        Heroine.prototype.getDatedBit = function () {
-            return this.dated ? 1 : 0;
+        Heroine.prototype.getDatedCount = function () {
+            return this.dated;
         };
 
         return Heroine;
