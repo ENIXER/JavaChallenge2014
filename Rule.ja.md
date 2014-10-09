@@ -1,6 +1,4 @@
-# Lang Wars - JavaChallenge 2014 *TBD*
-
-*THIS DOCUMENT IS STILL BETA!*
+# Lang Wars - JavaChallenge 2014
 
 ## ゲームの概要
 
