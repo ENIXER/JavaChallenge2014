@@ -143,7 +143,7 @@ Note that, if an AI program does not print its action within 1 second from the b
 
 ## Pseudo Code of Game Rule
 
-    programming_language = (attention, revealed_believer[4], real_believer[4])
+    programming_language = (attention, revealed_believers[4], real_believers[4])
 
     main:
         init
@@ -160,30 +160,30 @@ Note that, if an AI program does not print its action within 1 second from the b
     process_turn:
         for l in languages:
             display_to_all_players(l.attention)
-            display_to_all_players(l.revealed_believer)
+            display_to_all_players(l.revealed_believers)
             if not is_holiday:
                 display_to_all_players(l.propagated)
-            l.propagated = false
+            l.propagated = 0
 
         for p in players:
             for i in [1 .. (is_holiday ? 2 : 5)]:
                 target = languages[p.selected[i]]
-                target.revealed_believer[p] += (is_holiday ? 0 : 1)
-                target.real_believer[p] += 1
-                target.propagated = true
+                target.revealed_believers[p] += (is_holiday ? 0 : 1)
+                target.real_believers[p] += 1
+                target.propagated += 1
 
     is_holiday:
         turn % 2 == 0
 
     finish:
         for l in languages:
-            best_players = players.max_by(p -> l.real_believer[p])
+            best_players = players.max_by(p -> l.real_believers[p])
             for p in best_players:
-                p.victory_point += h.attention / best_players.size
+                p.victory_points += h.attention / best_players.size
 
-            worst_players = players.min_by(p -> l.real_believer[p])
+            worst_players = players.min_by(p -> l.real_believers[p])
             for p in worst_players:
-                p.victory_point -= h.attention / worst_players.size
+                p.victory_points -= h.attention / worst_players.size
 
-        winners = players.max_by(p -> p.victory_point)
+        winners = players.max_by(p -> p.victory_points)
         draw if winners.size > 1
