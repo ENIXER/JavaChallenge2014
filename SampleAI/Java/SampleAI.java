@@ -59,8 +59,8 @@ public class SampleAI {
 		}
 		if (day == 'W') {
 			for (int i = 0; i < heroinesNum; i++) {
-				int dated = scanner.nextInt();
-				heroines[i].dated = (dated == 1);
+				int datedTimes = scanner.nextInt();
+				heroines[i].datedTimes = datedTimes;
 			}
 		}
 	}
@@ -79,8 +79,7 @@ public class SampleAI {
 }
 
 class Heroine {
-	int enthusiasm, revealedScore[], realScore;
-	boolean dated;
+	int enthusiasm, revealedScore[], realScore, datedTimes;
 
 	Heroine(int enthusiasm) {
 		this.enthusiasm = enthusiasm;
