@@ -2,7 +2,7 @@
 
 ## Overview of Game
 
-You are programmer.
+You are a programmer.
 Let's propagandize programming languages and increase the number of believers of the programming languages.
 Overreach rivals and become the pontiff of programming languages!
 
