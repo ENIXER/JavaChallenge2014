@@ -28,7 +28,7 @@ The player who gains the most victory points will win!
 
 ## Game Start
 
-The game system set random _attention degree_ (from 3 to 6) to every programming language, and reveal them to players at the beginning.
+The game system sets random _attention degree_ (from 3 to 6) to every programming language, and reveals them to players at the beginning.
 A language with higher attention degree has more victory points. Players who gathered the most/least number of believers of this language will gain/lose victory points.
 
 ## Flow of Turn
@@ -82,7 +82,7 @@ Note that, the ready message must be printed within 5 seconds from game start, o
 ### Input Format of Game Settings
 
 When the game starts (before the 1st turn), the game system sends settings to every AI program through the standard input.
-The format of settings are listed as following:
+The format of settings is listed as following:
 
 <pre>
 T P N
@@ -136,7 +136,7 @@ Print the language to propagate to the standard output with following format:
 
 L<sub>i</sub>: The number of programming language to propagate (from 0 to 7). The order of L<sub>0</sub> to L<sub>4</sub> is not concerned.
 
-Once an AI program prints its action, its turn finish.
+Once an AI program prints its action, its turn finishes.
 Note that, if an AI program does not print its action within 1 second from the beginning of a turn, it will be terminated by force.
 
 <a name="PseudoCode"></a>
