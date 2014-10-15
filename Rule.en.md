@@ -19,23 +19,23 @@ Get more _victory points_, which are calculated with the number of believers of 
 There are four players and eight programming languages.
 
 Lang Wars is a turn-based game. Players _propagandize_ their favorite programming languages and gather believers.
-Because players' actions are partially hidden, it is important that bargaingin with each other.
+Because players' actions are partially hidden, it is important to bargain with each other.
 
-Games end in 10 turns, then players gain victory points corresponding to the number of believers of programing languages.
+Games end in 10 turns, then players gain victory points corresponding to the number of believers of programming languages.
 The player who gathered the most number of the believers of a programming language gets the victory points of the language, in contrast, the player who gathered the least number of the believers of a programming language loses the victory points of the language.
-Thus, players should propagate favorite programming languages and gather more believers than the other players, and also, propagate the other programming languages to prevent losing victory points.
+Thus, players should propagate their favorite programming languages and gather more believers than the other players, and also, propagate the other programming languages to prevent losing victory points.
 The player who gains the most victory points will win!
 
 ## Game Start
 
 The game system set random _attention degree_ (from 3 to 6) to every programming language, and reveal them to players at the beginning.
-A language with higher attention degree has more victory points. Players who gathered the most/least number of believers of this language will gain/lose more victory points.
+A language with higher attention degree has more victory points. Players who gathered the most/least number of believers of this language will gain/lose victory points.
 
 ## Flow of Turn
 
-There are two types of turns, workday turn and holiday turn.
+There are two types of turns, workday turns and holiday turns.
 The first turn is workday. Workday and holiday turns will alternately appear.
-In other words, two turns is one week, odd turn is workday and even turn is holiday.
+In other words, two turns makes one week. Odd turn is workday and even turn is holiday.
 Players simultaneously select propagating programming languages.
 They select programming languages five times in a workday turn, and two times in a holiday turn.
 Players select a programming language to propagate one time, will gather one believer of that language.
