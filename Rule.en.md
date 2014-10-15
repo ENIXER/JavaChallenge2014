@@ -89,9 +89,9 @@ T P N
 A<sub>0</sub> A<sub>1</sub> A<sub>2</sub> ... A<sub>7</sub>
 </pre>
 
-* T: The number of all turns.
-* P: The number of players.
-* N: The number of programming language.
+* T: The number of all turns (always 10).
+* P: The number of players (always 4).
+* N: The number of programming language (always 8).
 * A<sub>n</sub>: The attention degree of language n.
 
 ### Input Format of Turn Information
