@@ -92,7 +92,7 @@ A<sub>0</sub> A<sub>1</sub> A<sub>2</sub> ... A<sub>7</sub>
 * T: The number of all turns (always 10).
 * P: The number of players (always 4).
 * N: The number of programming language (always 8).
-* A<sub>n</sub>: The attention degree of language n.
+* A<sub>i</sub>: The attention degree of language i.
 
 ### Input Format of Turn Information
 
@@ -112,9 +112,9 @@ P<sub>0</sub> P<sub>1</sub> P<sub>2</sub> ... P<sub>7</sub>
 
 * T: Current turn. (starts from 1)
 * D: "W" stand for workday turn, "H" stand for holiday turn.
-* B<sub>nm</sub>: The visible number (only counting the believers gathered in workday turn) of believers of programming language n gathered by player m. The player 0 is your AI program.
-* R<sub>n</sub>: Your real number of believers of program n (counting the believers gathered in both workday and holiday turns).
-* P<sub>n</sub>: The number of times the programming language n was propagated in the previous holiday turn.
+* B<sub>ij</sub>: The visible number (only counting the believers gathered in workday turn) of believers of programming language i gathered by player j. The player 0 is your AI program.
+* R<sub>i</sub>: Your real number of believers of program i (counting the believers gathered in both workday and holiday turns).
+* P<sub>i</sub>: The number of times the programming language i was propagated in the previous holiday turn.
 
 The last line (P<sub>0</sub> P<sub>1</sub> P<sub>2</sub> ... P<sub>7</sub>) is only revealed in workday turns.
 
@@ -134,7 +134,7 @@ Print the language to propagate to the standard output with following format:
   L<sub>0</sub> L<sub>1</sub>
   </pre>
 
-L<sub>n</sub>: The number of programming language to propagate (from 0 to 7). The order of L<sub>0</sub> to L<sub>4</sub> is not concerned.
+L<sub>i</sub>: The number of programming language to propagate (from 0 to 7). The order of L<sub>0</sub> to L<sub>4</sub> is not concerned.
 
 Once an AI program prints its action, its turn finish.
 Note that, if an AI program does not print its action within 1 second from the beginning of a turn, it will be terminated by force.
