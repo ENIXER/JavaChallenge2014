@@ -60,7 +60,7 @@ The following table indicates the propagation feature in a workday turn and a ho
 After 10 turns, the game ends and victory points are calculated.
 
 The player who gathered the most/least number of the believers of a programming language gains/loses the attention degree of the language as victory points.
-When multiple players gathered the most/least number of the believers, they gain/lose the attention degree divided by the number of the players (floating-point divisions are used).
+When multiple players gathered the most/least number of the believers, they gain/lose the attention degree divided by the number of the players. Floating-point divisions are used in calculating victory points.
 
 After victory points of all the programming languages are calculated, the player who gained the most victory points wins.
 When there are multiple players gained the most victory points, the game ends in a draw.
