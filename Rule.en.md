@@ -68,7 +68,7 @@ When there are multiple players gained the most victory points, the game ends in
 ## Input Format of AI Programs
 
 AI programs are executed at the start of the game.
-AI programs should read the settings of game, and print `READY` and the endline ("\n") to the standard output.
+AI programs should print `READY` and the newline character ("\n") to the standard output, and then read the settings of game.
 Be sure to flush the standard output after printing.
 Then, AI programs read current propagation information of each turn, and print the selected languages.
 
@@ -77,7 +77,7 @@ If an AI program exceeds the limited thinking time, it will be terminated by for
 
 ### Output Format of Ready Message
 
-When the AI programs prepared for the game, they must print `READY` and the endline ("\n") to the standard output.
+When the AI programs prepared for the game, they must print `READY` and the newline character ("\n") to the standard output.
 Be sure to flush the standard output after printing.
 Note that, the ready message must be printed within 5 seconds from game start, otherwise the AI program will be terminated by force.
 
@@ -138,7 +138,7 @@ Print the language to propagate to the standard output with the following format
 
 L<sub>i</sub>: The number of programming language to propagate (from 0 to 7). The order of L<sub>0</sub> to L<sub>4</sub> is not concerned.
 
-Please terminate the output with the endline ("\n"), and be sure to flush the standard output after printing.
+Please terminate the output with the newline character ("\n"), and be sure to flush the standard output after printing.
 Once an AI program prints its action, its turn finishes.
 Note that, if an AI program does not print its action within 1 second from the beginning of a turn, it will be terminated by force.
 
