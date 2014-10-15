@@ -96,7 +96,7 @@ A<sub>0</sub> A<sub>1</sub> A<sub>2</sub> ... A<sub>7</sub>
 
 ### Input Format of Turn Information
 
-At the beginning of each turn, current information is sent through the standard input with following format:
+At the beginning of each turn, current information is sent through the standard input with the following format:
 
 <pre>
 T D
@@ -120,7 +120,7 @@ The last line (P<sub>0</sub> P<sub>1</sub> P<sub>2</sub> ... P<sub>7</sub>) is o
 
 ### Output format of Actions
 
-Print the language to propagate to the standard output with following format:
+Print the language to propagate to the standard output with the following format:
 
 * __Workday Turn__
 
