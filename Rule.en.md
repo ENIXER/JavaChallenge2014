@@ -35,7 +35,7 @@ A language with higher attention degree has more victory points. Players who gat
 
 There are two types of turns, workday turns and holiday turns.
 The first turn is workday. Workday and holiday turns will alternately appear.
-In other words, two turns make one week. Odd turn is workday and even turn is holiday.
+In other words, two turns make one week. Odd turns are workday and even turns are holiday.
 Players simultaneously select programming languages to propagate.
 They select languages to propagate five times in a workday turn, and two times in a holiday turn.
 Players select a programming language to propagate one time, will gather one believer of that language.
