@@ -71,7 +71,7 @@ AI programs are executed at the start of the game.
 AI programs should print `READY` to the standard output and read the settings of game.
 Then, AI programs read current propagation information of each turn, and print the selected languages.
 
-The Thinking time of AI is limited.
+The thinking time of AI is limited.
 If an AI program exceeds the limited thinking time, it will be terminated by force and its behavior will be regarded as "select language 0 always" until the end.
 
 ### Output Format of Ready Message
@@ -81,7 +81,7 @@ Note that, the ready message must be printed within 5 seconds from game start, o
 
 ### Input Format of Game Settings
 
-When the game starts (before the 1st turn), game system sends settings to every AI program through the standard input.
+When the game starts (before the 1st turn), the game system sends settings to every AI program through the standard input.
 The format of settings are listed as following:
 
 <pre>
@@ -96,7 +96,7 @@ A<sub>0</sub> A<sub>1</sub> A<sub>2</sub> ... A<sub>7</sub>
 
 ### Input Format of Turn Information
 
-At the beginning of each turn, current information was sent through the standard input with following format:
+At the beginning of each turn, current information is sent through the standard input with following format:
 
 <pre>
 T D
@@ -112,15 +112,15 @@ P<sub>0</sub> P<sub>1</sub> P<sub>2</sub> ... P<sub>7</sub>
 
 * T: Current turn. (starts from 1)
 * D: "W" stand for workday turn, "H" stand for holiday turn.
-* B<sub>nm</sub>: The visible number (only counting the believers gathered in workday turn) of believers of programming language n gathered by player m. The play 0 is your AI program.
-* R<sub>n</sub>: Your real number of believers of program n (counting the believers gathered in both workday and holiday turn).
+* B<sub>nm</sub>: The visible number (only counting the believers gathered in workday turn) of believers of programming language n gathered by player m. The player 0 is your AI program.
+* R<sub>n</sub>: Your real number of believers of program n (counting the believers gathered in both workday and holiday turns).
 * P<sub>n</sub>: Whether the programming language n was propagated in the previous holiday turn. 1 means propagated, 0 means not.
 
-The last line (P<sub>0</sub> P<sub>1</sub> P<sub>2</sub> ... P<sub>7</sub>) is only revealed in workday turn.
+The last line (P<sub>0</sub> P<sub>1</sub> P<sub>2</sub> ... P<sub>7</sub>) is only revealed in workday turns.
 
 ### Output format of Actions
 
-Print the propagating language to the standard output with following format:
+Print the language to propagate to the standard output with following format:
 
 * __Workday Turn__
 
@@ -134,9 +134,9 @@ Print the propagating language to the standard output with following format:
   L<sub>0</sub> L<sub>1</sub>
   </pre>
 
-L<sub>n</sub>: The number of propagating programming language (from 0 to 7). The order of L<sub>0</sub> to L<sub>4</sub> is not concerned.
+L<sub>n</sub>: The number of programming language to propagate (from 0 to 7). The order of L<sub>0</sub> to L<sub>4</sub> is not concerned.
 
-Once an AI program prints its action, its turn finished.
+Once an AI program prints its action, its turn finish.
 Note that, if an AI program does not print its action within 1 second from the beginning of a turn, it will be terminated by force.
 
 <a name="PseudoCode"></a>
