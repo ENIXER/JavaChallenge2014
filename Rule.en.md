@@ -35,13 +35,13 @@ A language with higher attention degree has more victory points. Players who gat
 
 There are two types of turns, workday turns and holiday turns.
 The first turn is workday. Workday and holiday turns will alternately appear.
-In other words, two turns makes one week. Odd turn is workday and even turn is holiday.
-Players simultaneously select propagating programming languages.
-They select programming languages five times in a workday turn, and two times in a holiday turn.
+In other words, two turns make one week. Odd turn is workday and even turn is holiday.
+Players simultaneously select programming languages to propagate.
+They select languages to propagate five times in a workday turn, and two times in a holiday turn.
 Players select a programming language to propagate one time, will gather one believer of that language.
 Players can freely choose which programming languages to propagate.
 For example, players can choose five programming languages to propagate each one time, or propagate the same programming language five times in a workday turn.
-In addition, players propagate the same programming language with others, will not influence others to gather believers.
+In addition, players who propagate the same programming language with others, will not influence others to gather believers.
 
 The number of the believers of each programming language will be calculated after all players select propagating languages.
 If the turn is workday, which player propagates which programming language is revealed.
@@ -53,7 +53,7 @@ The following table indicates the propagation feature in a workday turn and a ho
 | ----------------------------------------------- | ------- | ------- |
 | Propagation times                               | 5       | 2       |
 | Number of believers gathered per propagation    | 1       | 1       |
-| Revelation of propagation information           | ALL     | For each programming language, number of propagation times|
+| Revelation of propagation information           | ALL     | For each programming language, the number of propagation times|
 
 ## End of Game
 
