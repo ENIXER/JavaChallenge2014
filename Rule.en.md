@@ -115,7 +115,7 @@ P<sub>0</sub> P<sub>1</sub> P<sub>2</sub> ... P<sub>7</sub>
 * T: Current turn. (starts from 1)
 * D: "W" stand for workday turn, "H" stand for holiday turn.
 * B<sub>ij</sub>: The visible number (only counting the believers gathered in workday turn) of believers of programming language i gathered by player j. The player 0 is your AI program.
-* R<sub>i</sub>: Your real number of believers of program i (counting the believers gathered in both workday and holiday turns).
+* R<sub>i</sub>: Your real number of believers of programming language i (counting the believers gathered in both workday and holiday turns).
 * P<sub>i</sub>: The number of times the programming language i was propagated in the previous holiday turn.
 
 The last line (P<sub>0</sub> P<sub>1</sub> P<sub>2</sub> ... P<sub>7</sub>) is only revealed in workday turns.
