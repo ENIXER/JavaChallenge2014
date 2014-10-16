@@ -14,7 +14,7 @@ char Day;
 
 void readInitialData() {
 	cin >> MaxTurn >> PlayersNum >> HeroinesNum;
-	for(int i = 0; i < HeroinesNum; i++) {
+	for (int i = 0; i < HeroinesNum; i++) {
 		Heroine h;
 		cin >> h.enthusiasm;
 		Heroines.push_back(h);
@@ -23,20 +23,20 @@ void readInitialData() {
 
 void readData() {
 	cin >> Turn >> Day;
-	for(int i = 0; i < HeroinesNum; i++) {
+	for (int i = 0; i < HeroinesNum; i++) {
 		vector<int> rScores;
-		for(int j = 0; j < PlayersNum; j++){
+		for (int j = 0; j < PlayersNum; j++) {
 			int rs;
 			cin >> rs;
 			rScores.push_back(rs);
 		}
 		Heroines[i].revealedScore = rScores;
 	}
-	for(int i = 0; i < HeroinesNum; i++) {
+	for (int i = 0; i < HeroinesNum; i++) {
 		cin >> Heroines[i].realScore;
 	}
-	if(Day == 'W'){
-		for(int i = 0; i < HeroinesNum; i++) {
+	if (Day == 'W') {
+		for (int i = 0; i < HeroinesNum; i++) {
 			int d;
 			cin >> d;
 			Heroines[i].datedTimes = d;
@@ -45,8 +45,8 @@ void readData() {
 }
 
 void writeCommand() {
-	if(Day == 'W'){
-		for(int i = 0; i < 5; i++) {
+	if (Day == 'W') {
+		for (int i = 0; i < 5; i++) {
 			cout << rand() % HeroinesNum;
 			if (i < 4) {
 				cout << " ";
@@ -55,7 +55,7 @@ void writeCommand() {
 			}
 		}
 	} else {
-		for(int i = 0; i < 2; i++) {
+		for (int i = 0; i < 2; i++) {
 			cout << rand() % HeroinesNum;
 			if (i < 1) {
 				cout << " ";
