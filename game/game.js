@@ -122,18 +122,18 @@
         Game.prototype.getStatus = function () {
             var lines = [];
 
-            lines.push('Enthusiasm:');
+            lines.push('Attention:');
             lines.push(_.map(this.heroines, function (heroine) {
                 return heroine.enthusiasm;
             }).join(' '));
 
-            lines.push('Real Love:');
+            lines.push('Real Believers:');
             _.each(this.heroines, function (heroine) {
                 lines.push(heroine.realLove.join(' '));
             });
 
             if (this.isWeekday()) {
-                lines.push('Dated:');
+                lines.push('Propagated:');
                 lines.push(_.map(this.heroines, function (heroine) {
                     return heroine.getDatedCount();
                 }).join(' '));
@@ -141,7 +141,7 @@
 
             lines.push('Ranking:');
             _.each(this.getRanking(), function (player) {
-                lines.push('Player ' + player.index + ': ' + player.getPopularity() + ' popularity');
+                lines.push('Player ' + player.index + ': ' + player.getPopularity() + ' victory points');
             });
 
             return lines.join('\n') + '\n';
